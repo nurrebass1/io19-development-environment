@@ -7,10 +7,10 @@ The overview of the project is:
 ## Prequisites
 In order to deploy the development invirontments XX is required.
 
-# Foreman Pre-Configuration
+### Foreman Pre-Configuration
 
 
-# Script runner
+### Script runner
 Navigate to root by running 
 
 ```
