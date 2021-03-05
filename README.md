@@ -5,9 +5,20 @@ The overview of the project is:
 ![Overview](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/overview.PNG?raw=true)
 
 ## Prequisites
-In order to deploy the development invirontments XX is required.
+In order to deploy the development environments the below steps are required:
 
-### Foreman Pre-Configuration
+## Foreman Pre-Configuration
+### Create Host Groups:
+
+1- Login to the Foreman
+2- Navigate to "Configure" --> "Host groups"
+3- Create below host group:
+
+| Name                | Environment |
+| ------------------- | ----------- |
+| Compile Servers     | production  |
+| Development Servers | production  |
+| Storage Servers     | production  |
 
 
 ### Script runner
@@ -24,10 +35,21 @@ git clone https://github.com/nurrebass1/io19-development-environment.git
 
 ## How to run
 ```
-cd io19
+cd io19-development-environment
+```
+Copy your .openstack file to the directory.
 
+Open `projectx.mln` and modify IP address of your master/Foreman server and keypair name.
+
+Now you can start deployment using below command:
+
+```
 python3 deployer.py
 ```
+
+When you see the ` Please setup Foreman` then login to the Foreman, and navigate to "Configure" --> "classes", click on "Import environments ..." and update.
+
+The script is running in the background, so please wait until end of the script.
 
 ## Cleanup
 To cleanup the environment run
