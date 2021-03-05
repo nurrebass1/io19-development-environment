@@ -1,3 +1,2 @@
 
 */2 * * * * /opt/puppetlabs/puppet/bin/puppet cert sign --all
-*/2 * * * * /opt/puppetlabs/puppet/bin/puppet cert sign --all

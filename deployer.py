@@ -9,7 +9,9 @@ error=1
 # List of target servers to deploy
 #target_servers=["storage-1.projectx","storage-2.projectx","development-1.projectx","development-2.projectx","compiler-1.projectx","compiler-2.projectx"]
 
+
 # Config Foreman
+print('------------- Foreman setting up ------------')
 subprocess.run('apt-get install ruby-foreman-default-hostgroup', shell=True)
 subprocess.run('mkdir /etc/foreman/config/settings.plugins.d/', shell=True)
 subprocess.run('cp default_hostgroup.yaml /etc/foreman/config/settings.plugins.d/', shell=True)
@@ -20,9 +22,10 @@ subprocess.run('cp -r development /etc/puppetlabs/code/environments/production/m
 subprocess.run('cp -r storage /etc/puppetlabs/code/environments/production/manifests/', shell=True)
 subprocess.run('service foreman restart', shell=True)
 
-print("Please setup Foreman...........")
+print('------------- Please config classes in Foreman ------------')
 time.sleep(120)
 
+print('------------- Start Deployment ------------')
 # Build mln project
 subprocess.run('mln build -f projectx.mln -r', shell=True)
 time.sleep(5)
@@ -51,6 +54,7 @@ while error:
         time.sleep(40)
     rebuild_list=[]
 
+print('------------- Start Crontab Configuration ------------')
 #set crontab
 subprocess.run('crontab -l > mycron', shell=True)
 subprocess.run('echo "*/2 * * * * /opt/puppetlabs/puppet/bin/puppet cert sign --all" >> mycron', shell=True)
