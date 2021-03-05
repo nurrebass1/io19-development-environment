@@ -1,0 +1,9 @@
+---
+:default_hostgroup:
+  :facts_map:
+    "Compile Servers":
+       "hostname": "compiler.*"
+    "Development Servers":
+       "hostname": "development.*"
+    "Storage Servers":
+       "hostname": "storage.*"

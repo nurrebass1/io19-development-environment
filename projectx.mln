@@ -1,0 +1,88 @@
+global {
+	project projectx
+}
+superclass common {
+    openstack {
+        user_data {
+            apt-get update
+            wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
+            dpkg -i puppetlabs-release-pc1-xenial.deb
+            apt-get update
+            apt-get -y install puppet-agent
+            echo "10.0.48.225 foreman.openstacklocal master" >> /etc/hosts
+            wget http://128.39.121.53/repo/agent.pp 
+            /opt/puppetlabs/puppet/bin/puppet apply agent.pp
+   
+        }
+		image Ubuntu16.04
+		flavor m1.medium
+		keypair agent
+	}
+
+	network eth0 {
+		net netsys_net
+        address dhcp
+	}
+}
+
+host storage1 {
+	superclass common
+	openstack {
+		user_data {
+			echo "Storage-1 deployed"			
+
+		}
+	}
+}
+
+host storage2 {
+	superclass common
+	openstack {
+		user_data {
+			echo "Storage-2 deployed"			
+
+		}
+	}
+}
+
+host development1 {
+	superclass common
+	openstack {
+		user_data {
+			echo "Development-1 deployed"			
+
+		}
+	}
+}
+
+host development2 {
+	superclass common
+	openstack {
+		user_data {
+			echo "Development-2 deployed"			
+
+		}
+	}
+}
+
+host comipler1 {
+	superclass common
+	openstack {
+		user_data {
+			echo "Compiler-1 deployed"			
+
+		}
+	}
+}
+
+host compiler2 {
+	superclass common
+	openstack {
+		user_data {
+			echo "Compiler-2 deployed"			
+
+		}
+	}
+}
+
+

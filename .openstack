@@ -1,0 +1,5 @@
+export OS_TENANT_NAME='io19_project'
+export OS_USERNAME=s356478
+export OS_PASSWORD='iron Cuba from'
+export OS_AUTH_URL="https://cloud.cs.hioa.no:5000/v2.0/"
+
