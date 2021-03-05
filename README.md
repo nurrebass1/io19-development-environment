@@ -47,7 +47,7 @@ Now you can start deployment using below command:
 python3 deployer.py
 ```
 
-When you see the ` Please setup Foreman` then login to the Foreman, and navigate to "Configure" --> "classes", click on "Import environments ..." and update.
+When you see the ` Please config classes in Foreman ` then login to the Foreman, and navigate to "Configure" --> "classes", click on "Import environments ..." and update.
 
 The script is running in the background, so please wait until end of the script.
 
