@@ -12,7 +12,7 @@ cd
 ```
 ## Clone project
 ```
-git clone 
+git clone https://github.com/nurrebass1/io19-development-environment.git 
 ```
 
 ## How to run
