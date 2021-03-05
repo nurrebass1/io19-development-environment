@@ -10,9 +10,9 @@ In order to deploy the development environments the below steps are required:
 ## Foreman Pre-Configuration
 ### Create Host Groups:
 
-1- Login to the Foreman
-2- Navigate to "Configure" --> "Host groups"
-3- Create below host group:
+Login to the Foreman
+Navigate to "Configure" --> "Host groups"
+Create below host group:
 
 | Name                | Environment |
 | ------------------- | ----------- |
