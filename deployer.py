@@ -28,7 +28,7 @@ def handle_error():
             subprocess.run('mln start -p projectx -h ' + i, shell=True)
             time.sleep(20)
         rebuild_list = []
-        print('------------- All errors resolved ------------')
+        
 
 
 def deploy():
@@ -63,6 +63,7 @@ def deploy():
     time.sleep(30)
 
     handle_error()
+    print('------------- All errors resolved ------------')
 
     print('------------- Start Crontab Configuration ------------')
     subprocess.run('crontab -l > mycron', shell=True)
