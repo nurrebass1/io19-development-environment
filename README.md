@@ -22,7 +22,8 @@ You need to config the Foreman once you setup the Foreman, if you have not confi
 | Development Servers | production  |
 | Storage Servers     | production  |
 
-The result is:
+The result is:  
+
 ![host_group](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/host_group.PNG?raw=true)
 
 ### Script runner
