@@ -57,8 +57,7 @@ def deploy():
     subprocess.run('mln start -p projectx', shell=True)
     time.sleep(30)
 
-    while error:
-        handle_error()
+    handle_error()
 
     print('------------- Start Crontab Configuration ------------')
     subprocess.run('crontab -l > mycron', shell=True)
