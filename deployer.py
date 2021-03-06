@@ -41,7 +41,7 @@ def deploy():
     subprocess.run('cp default_hostgroup.yaml /etc/foreman/plugins/', shell=True)
 
     for folder in folders:
-        subprocess.run('cp -r' + folder + '/etc/puppetlabs/code/environments/production/manifests/', shell=True)
+        subprocess.run('cp -r ' + folder + ' /etc/puppetlabs/code/environments/production/manifests/', shell=True)
 
     subprocess.run('service foreman restart', shell=True)
 
