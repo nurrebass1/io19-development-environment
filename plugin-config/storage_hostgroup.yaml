@@ -1,0 +1,5 @@
+---
+:default_hostgroup:
+  :facts_map:
+    "Storage Servers":
+       "hostname": "storage.*"

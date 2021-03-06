@@ -36,9 +36,10 @@ def deploy():
 
     # Config Foreman
     print('------------- Foreman setting up ------------')
+    subprocess.run('foreman-installer --enable-foreman-plugin-discovery', shell=True)
     subprocess.run('apt-get install ruby-foreman-default-hostgroup', shell=True)
     subprocess.run('mkdir -p /etc/foreman/config/settings.plugins.d/', shell=True)
-    subprocess.run('cp default_hostgroup.yaml /etc/foreman/config/settings.plugins.d/', shell=True)
+    subprocess.run('cp plugin-config/* /etc/foreman/config/settings.plugins.d/', shell=True)
     subprocess.run('cp default_hostgroup.yaml /etc/foreman/plugins/', shell=True)
 
     for folder in folders:
@@ -46,6 +47,7 @@ def deploy():
 
     subprocess.run('service foreman restart', shell=True)
 
+    print('------------- Please log out and log in from Foreman ------------')    
     print('------------- Please config classes in Foreman ------------')
     time.sleep(20)
     print('40 seconds left')
