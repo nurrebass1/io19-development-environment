@@ -2,8 +2,6 @@ import subprocess
 import time
 
 cert_list = ['comipler1', 'comipler2', 'development1', 'development2', 'storage1', 'storage2']
-target_servers = ["storage-1.projectx", "storage-2.projectx", "development-1.projectx", "development-2.projectx",
-                  "compiler-1.projectx", "compiler-2.projectx"]
 
 
 def cleanup():
@@ -17,8 +15,8 @@ def cleanup():
 
     print('<---------- DELETING INSTANCES ------->')
 
-    for server in target_servers:
-        subprocess.run('nova delete' + server, shell=True)
+    for server in cert_list:
+        subprocess.run('nova delete ' + server + '.projectx', shell=True)
         time.sleep(5)
 
     print('-------------- DONE ------------')
