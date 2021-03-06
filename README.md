@@ -70,7 +70,7 @@ You should assign each class to a host group. So click on each class and assign 
 | passhash::install   | production  | Compile Servers, Development Servers, Storage Servers |
 | users::configure    | production  | Compile Servers, Development Servers, Storage Servers |
 
-![classes-assign](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/classes-assign.png.PNG?raw=true)
+![classes-assign](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/classes-assign.png?raw=true)
 
 Now, please navigate to the "Administer" &rarr; "Settings", and check the `DefaultHostGroup` configuration:
 ![DefaultHOstGroup](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/plugin_settings.PNG?raw=true)
