@@ -65,7 +65,7 @@ host development2 {
 	}
 }
 
-host comipler1 {
+host compiler1 {
 	superclass common
 	openstack {
 		user_data {
