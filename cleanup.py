@@ -5,6 +5,10 @@ cert_list = ['compiler1', 'compiler2', 'development1', 'development2', 'storage1
 
 
 def cleanup():
+    print('<---------- REMOVE CRONTAB RULE ------->')
+    subprocess.run('echo "" >> mycron', shell=True)
+    subprocess.run('crontab mycron', shell=True)
+    
     print('------------- REMOVING CERTIFICATES ---------')
 
     for i in cert_list:
@@ -16,6 +20,7 @@ def cleanup():
     for server in cert_list:
         subprocess.run('nova delete ' + server + '.projectx', shell=True)
         time.sleep(5)
+    
 
     print('-------------- DONE ------------')
 
