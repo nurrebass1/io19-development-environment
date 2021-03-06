@@ -8,6 +8,8 @@ The overview of the project is show below:
 In order to deploy the development environments the below steps are required:
 
 ## Foreman Pre-Configuration
+
+You need to config the Foreman once you setup the Foreman, if you have not configured it yet, please follow below steps:
 ### Create Host Groups:
 
 1) Login to the Foreman  
@@ -20,6 +22,8 @@ In order to deploy the development environments the below steps are required:
 | Development Servers | production  |
 | Storage Servers     | production  |
 
+The result is:
+![host_group](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/host_group.PNG?raw=true)
 
 ### Script runner
 Navigate to root by running 
@@ -53,6 +57,11 @@ When you see the ` Please config classes in Foreman ` then
 1) login to the Foreman 
 2) Navigate to "Configure" &rarr; "classes"
 3) Click on "Import environments ..." and update.
+The result is :
+![classes](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/classes.PNG?raw=true)
+
+Now, please navigate to the "Administer" &rarr; "Settings", and check the `DefaultHOstGroup` configuration:
+![DefaultHOstGroup](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/plugin_settings.PNG?raw=true)
 
 The script is running in the background, so please wait until end of the script.
 
