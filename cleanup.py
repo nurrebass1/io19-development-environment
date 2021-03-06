@@ -1,7 +1,7 @@
 import subprocess
 import time
 
-cert_list = ['comipler1', 'comipler2', 'development1', 'development2', 'storage1', 'storage2']
+cert_list = ['compiler1', 'compiler2', 'development1', 'development2', 'storage1', 'storage2']
 
 
 def cleanup():
