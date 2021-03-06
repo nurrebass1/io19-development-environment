@@ -26,7 +26,7 @@ def handle_error():
             subprocess.run('nova delete ' + i + '.projectx', shell=True)
             time.sleep(10)
             subprocess.run('mln start -p projectx -h ' + i, shell=True)
-            time.sleep(40)
+            time.sleep(20)
         rebuild_list = []
 
 
