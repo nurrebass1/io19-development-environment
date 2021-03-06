@@ -44,8 +44,8 @@ cd io19-development-environment
 ```
 Copy your .openstack file to the directory.  
 
-Open `projectx.mln` and modify the following:  
-1) IP address of your master/Foreman server
+Open the `projectx.mln` file and modify the following:  
+1) IP address of your master/Foreman server and the hostname if it differs from yours
 2) The keypair name  
 
 Now you can start the deployment using the command below:  
