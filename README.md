@@ -57,9 +57,9 @@ python3 deployer.py
 When you see the ` Please config classes in Foreman ` then 
 1) login to the Foreman 
 2) Navigate to "Configure" &rarr; "classes"
-3) Click on "Import environments ..." and update.
-The result is :
-![classes](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/classes.PNG?raw=true)
+3) Click on "Import environments ..." and update.  
+The result is:  
+![classes](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/classes.PNG?raw=true)  
 You should assign each class to a host group. So click on each class and assign to host group/groups based on below table:  
 
 | Class name          | Environment | Host groups                                           |
