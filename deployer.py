@@ -40,7 +40,7 @@ def deploy():
     subprocess.run('apt-get install ruby-foreman-default-hostgroup', shell=True)
     subprocess.run('mkdir -p /etc/foreman/config/settings.plugins.d/', shell=True)
     subprocess.run('cp plugin-config/* /etc/foreman/config/settings.plugins.d/', shell=True)
-    subprocess.run('cp default_hostgroup.yaml /etc/foreman/plugins/', shell=True)
+    subprocess.run('cp plugin-config/* /etc/foreman/plugins/', shell=True)
 
     for folder in folders:
         subprocess.run('cp -r ' + folder + '/' + ' /etc/puppetlabs/code/environments/production/manifests/', shell=True)
