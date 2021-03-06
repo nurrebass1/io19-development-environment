@@ -28,6 +28,7 @@ def handle_error():
             subprocess.run('mln start -p projectx -h ' + i, shell=True)
             time.sleep(20)
         rebuild_list = []
+        print('------------- All errors resolved ------------')
 
 
 def deploy():
@@ -64,6 +65,7 @@ def deploy():
     subprocess.run('echo "*/2 * * * * /opt/puppetlabs/puppet/bin/puppet cert sign --all" >> mycron', shell=True)
     subprocess.run('crontab mycron', shell=True)
     subprocess.run('service cron restart', shell=True)
+    print('------------- Deployment completed ------------')
 
 
 deploy()

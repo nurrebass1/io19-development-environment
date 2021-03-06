@@ -5,8 +5,6 @@ cert_list = ['compiler1', 'compiler2', 'development1', 'development2', 'storage1
 
 
 def cleanup():
-    print('------------- DELETING MANIFESTS ------------')
-    subprocess.run('rm -rf /etc/puppetlabs/code/environments/production/manifests/', shell=True)
     print('------------- REMOVING CERTIFICATES ---------')
 
     for i in cert_list:
