@@ -47,7 +47,11 @@ def deploy():
     subprocess.run('service foreman restart', shell=True)
 
     print('------------- Please config classes in Foreman ------------')
-    time.sleep(60)
+    time.sleep(20)
+    print('40 seconds left')
+    time.sleep(20)
+    print('20 seconds left')
+    time.sleep(20)
 
     print('------------- Start Deployment ------------')
     # Build mln project

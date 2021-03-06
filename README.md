@@ -61,7 +61,7 @@ When you see the ` Please config classes in Foreman ` then
 The result is :
 ![classes](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/classes.PNG?raw=true)
 
-Now, please navigate to the "Administer" &rarr; "Settings", and check the `DefaultHOstGroup` configuration:
+Now, please navigate to the "Administer" &rarr; "Settings", and check the `DefaultHostGroup` configuration:
 ![DefaultHOstGroup](https://github.com/nurrebass1/io19-development-environment/blob/master/Images/plugin_settings.PNG?raw=true)
 
 The script is running in the background, so please wait until end of the script.
