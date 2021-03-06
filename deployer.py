@@ -36,7 +36,7 @@ def deploy():
     # Config Foreman
     print('------------- Foreman setting up ------------')
     subprocess.run('apt-get install ruby-foreman-default-hostgroup', shell=True)
-    subprocess.run('mkdir /etc/foreman/config/settings.plugins.d/', shell=True)
+    subprocess.run('mkdir -p /etc/foreman/config/settings.plugins.d/', shell=True)
     subprocess.run('cp default_hostgroup.yaml /etc/foreman/config/settings.plugins.d/', shell=True)
     subprocess.run('cp default_hostgroup.yaml /etc/foreman/plugins/', shell=True)
 
